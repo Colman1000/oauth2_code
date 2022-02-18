@@ -11,7 +11,7 @@ the [flutter_web_auth](https://pub.dev/packages/flutter_web_auth) package.
 It also provides some social UI buttons for use within your app.
 
 <br>
-![Image](https://github.com/Colman1000/veegil_oauth2/blob/master/lib/images/phone_screen.png)
+![Image](https://github.com/Colman1000/veegil_oauth2/blob/main/lib/images/phone_screen.png)
 
 -----
 
