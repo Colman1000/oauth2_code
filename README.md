@@ -19,7 +19,7 @@ It also provides some social UI buttons for use within your app.
 Add the dependency in pubsec.yaml file.
 
 ```yaml
-dart
+
 dependencies:
   flutter:
     sdk: flutter
