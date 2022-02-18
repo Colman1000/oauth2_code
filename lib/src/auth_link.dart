@@ -10,6 +10,7 @@ class AuthLink {
     String webRedirectUri = '',
     String baseUri = '',
     String scope = '',
+    this.overrideUri,
   })  : _androidClientID = androidClientID,
         _iOSClientID = iOSClientID,
         _webClientID = webClientID,
@@ -30,8 +31,16 @@ class AuthLink {
   final String _baseUri;
   final String _scope;
 
+  final String Function(
+    String baseUri,
+    String clientID,
+    String redirectUri,
+    String scope,
+  )? overrideUri;
+
   String get uri =>
-      "$_baseUri?redirect_uri=$redirectUri&client_id=$clientID&scope=$_scope&prompt=consent&response_type=code&access_type=offline";
+      overrideUri?.call(_baseUri, clientID, redirectUri, _scope) ??
+      "$_baseUri?redirect_uri=$redirectUri&client_id=$clientID&scope=$_scope&prompt=consent&response_type=code&access_type=offline&code_challenge=challenge&code_challenge_method=plain";
 
   String get clientID => XPlatform.isAndroid
       ? _androidClientID

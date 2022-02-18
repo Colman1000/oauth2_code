@@ -41,24 +41,26 @@ class _InAppWebViewHandlerState extends State<InAppWebViewHandler> {
       appBar: widget.appBar,
       body: Builder(
         builder: (BuildContext context) {
-          return WebView(
-            initialUrl: widget.authUrl,
-            javascriptMode: JavascriptMode.unrestricted,
-            onWebViewCreated: (WebViewController controller) async {
-              webViewController = controller;
-            },
-            navigationDelegate: (NavigationRequest request) async {
-              final _code =
-                  Uri.parse(request.url).queryParameters[widget.codeQueryParam];
+          return SafeArea(
+            child: WebView(
+              initialUrl: widget.authUrl,
+              javascriptMode: JavascriptMode.unrestricted,
+              onWebViewCreated: (WebViewController controller) async {
+                webViewController = controller;
+              },
+              navigationDelegate: (NavigationRequest request) async {
+                final _code = Uri.parse(request.url)
+                    .queryParameters[widget.codeQueryParam];
 
-              if (_code != null && _code.isNotEmpty) {
-                NavigationDecision.prevent;
-                Navigator.of(context).pop(_code);
-              }
+                if (_code != null && _code.isNotEmpty) {
+                  NavigationDecision.prevent;
+                  Navigator.of(context).pop(_code);
+                }
 
-              return NavigationDecision.navigate;
-            },
-            gestureNavigationEnabled: false,
+                return NavigationDecision.navigate;
+              },
+              gestureNavigationEnabled: false,
+            ),
           );
         },
       ),

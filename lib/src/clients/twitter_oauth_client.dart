@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_web_auth/flutter_web_auth.dart';
 
 import '../../oauth2_code.dart';
-import '../auth_link.dart';
 
 class TwitterOAuthClient extends OAuthClient {
   TwitterOAuthClient(
