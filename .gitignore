@@ -1,1 +1,5 @@
 .idea/
+
+.packages
+.flutter-plugins
+.flutter-plugins-dependencies

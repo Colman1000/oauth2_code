@@ -1,4 +1,4 @@
-name: oauth2_veegil
+name: veegil_oauth2
 description: An OAuth2 that gets and returns the auth code for Google, Facebook, LinkedIn and Twitter
 publish_to: 'none'
 version: 1.0.0+1
@@ -7,8 +7,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_social_button: 1.1.3
+  flutter_social_button: ^1.1.3
   flutter_web_auth: ^0.4.0
+  webview_flutter: any
 dev_dependencies:
   flutter_test:
     sdk: flutter
