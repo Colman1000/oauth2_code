@@ -3,7 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'constants.dart';
 
-enum OAuthButtonType {
+enum OAuth2ButtonType {
   facebook,
   google,
   twitter,
@@ -17,7 +17,7 @@ enum OAuthButtonType {
 
 class OAuth2Button extends StatelessWidget {
   final VoidCallback onTap;
-  final OAuthButtonType buttonType;
+  final OAuth2ButtonType buttonType;
   final Color iconColor;
   final bool mini;
   final String? title;
@@ -25,7 +25,7 @@ class OAuth2Button extends StatelessWidget {
   const OAuth2Button({
     Key? key,
     required this.onTap,
-    this.buttonType = OAuthButtonType.email,
+    this.buttonType = OAuth2ButtonType.email,
     this.iconColor = Colors.white,
     this.mini = false,
     this.title,
@@ -37,7 +37,7 @@ class OAuth2Button extends StatelessWidget {
   Widget build(BuildContext context) {
     switch (buttonType) {
       //Apple Button implementation
-      case OAuthButtonType.apple:
+      case OAuth2ButtonType.apple:
         return mini
             ? ElevatedButton(
                 onPressed: onTap,
@@ -72,7 +72,7 @@ class OAuth2Button extends StatelessWidget {
               );
 
       //Facebook Button implementation
-      case OAuthButtonType.facebook:
+      case OAuth2ButtonType.facebook:
         return mini
             ? ElevatedButton(
                 onPressed: onTap,
@@ -107,7 +107,7 @@ class OAuth2Button extends StatelessWidget {
               );
 
       //Google Button implementation
-      case OAuthButtonType.google:
+      case OAuth2ButtonType.google:
         return mini
             ? ElevatedButton(
                 onPressed: onTap,
@@ -141,7 +141,7 @@ class OAuth2Button extends StatelessWidget {
                 ),
               );
       //Twitter Button implementation
-      case OAuthButtonType.twitter:
+      case OAuth2ButtonType.twitter:
         return mini
             ? ElevatedButton(
                 onPressed: onTap,
@@ -176,7 +176,7 @@ class OAuth2Button extends StatelessWidget {
               );
 
       //Linkedin Button implementation
-      case OAuthButtonType.linkedin:
+      case OAuth2ButtonType.linkedin:
         return mini
             ? ElevatedButton(
                 onPressed: onTap,
@@ -210,7 +210,7 @@ class OAuth2Button extends StatelessWidget {
                 ),
               );
       //Whatsapp Button implementation
-      case OAuthButtonType.whatsapp:
+      case OAuth2ButtonType.whatsapp:
         return mini
             ? ElevatedButton(
                 onPressed: onTap,
@@ -244,7 +244,7 @@ class OAuth2Button extends StatelessWidget {
                 ),
               );
       //GitHub Button implementation
-      case OAuthButtonType.github:
+      case OAuth2ButtonType.github:
         return mini
             ? ElevatedButton(
                 onPressed: onTap,
@@ -278,7 +278,7 @@ class OAuth2Button extends StatelessWidget {
                 ),
               );
       //Phone Button implementation
-      case OAuthButtonType.phone:
+      case OAuth2ButtonType.phone:
         return mini
             ? ElevatedButton(
                 onPressed: onTap,
