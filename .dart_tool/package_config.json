@@ -56,12 +56,6 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "flutter_social_button",
-      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_social_button-1.1.3",
-      "packageUri": "lib/",
-      "languageVersion": "2.15"
-    },
-    {
       "name": "flutter_test",
       "rootUri": "file:///C:/flutter/packages/flutter_test",
       "packageUri": "lib/",
@@ -206,13 +200,13 @@
       "languageVersion": "2.14"
     },
     {
-      "name": "veegil_oauth2",
+      "name": "oauth2_code",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2022-02-18T12:25:30.072004Z",
+  "generated": "2022-02-18T12:53:12.731933Z",
   "generator": "pub",
   "generatorVersion": "2.16.0"
 }

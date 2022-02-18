@@ -3,7 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'constants.dart';
 
-enum ButtonType {
+enum OAuthButtonType {
   facebook,
   google,
   twitter,
@@ -15,17 +15,17 @@ enum ButtonType {
   email
 }
 
-class FlutterSocialButton extends StatelessWidget {
+class OAuth2Button extends StatelessWidget {
   final VoidCallback onTap;
-  final ButtonType buttonType;
+  final OAuthButtonType buttonType;
   final Color iconColor;
   final bool mini;
   final String? title;
 
-  const FlutterSocialButton({
+  const OAuth2Button({
     Key? key,
     required this.onTap,
-    this.buttonType = ButtonType.email,
+    this.buttonType = OAuthButtonType.email,
     this.iconColor = Colors.white,
     this.mini = false,
     this.title,
@@ -37,7 +37,7 @@ class FlutterSocialButton extends StatelessWidget {
   Widget build(BuildContext context) {
     switch (buttonType) {
       //Apple Button implementation
-      case ButtonType.apple:
+      case OAuthButtonType.apple:
         return mini
             ? ElevatedButton(
                 onPressed: onTap,
@@ -72,7 +72,7 @@ class FlutterSocialButton extends StatelessWidget {
               );
 
       //Facebook Button implementation
-      case ButtonType.facebook:
+      case OAuthButtonType.facebook:
         return mini
             ? ElevatedButton(
                 onPressed: onTap,
@@ -107,7 +107,7 @@ class FlutterSocialButton extends StatelessWidget {
               );
 
       //Google Button implementation
-      case ButtonType.google:
+      case OAuthButtonType.google:
         return mini
             ? ElevatedButton(
                 onPressed: onTap,
@@ -141,7 +141,7 @@ class FlutterSocialButton extends StatelessWidget {
                 ),
               );
       //Twitter Button implementation
-      case ButtonType.twitter:
+      case OAuthButtonType.twitter:
         return mini
             ? ElevatedButton(
                 onPressed: onTap,
@@ -176,7 +176,7 @@ class FlutterSocialButton extends StatelessWidget {
               );
 
       //Linkedin Button implementation
-      case ButtonType.linkedin:
+      case OAuthButtonType.linkedin:
         return mini
             ? ElevatedButton(
                 onPressed: onTap,
@@ -210,7 +210,7 @@ class FlutterSocialButton extends StatelessWidget {
                 ),
               );
       //Whatsapp Button implementation
-      case ButtonType.whatsapp:
+      case OAuthButtonType.whatsapp:
         return mini
             ? ElevatedButton(
                 onPressed: onTap,
@@ -244,7 +244,7 @@ class FlutterSocialButton extends StatelessWidget {
                 ),
               );
       //GitHub Button implementation
-      case ButtonType.github:
+      case OAuthButtonType.github:
         return mini
             ? ElevatedButton(
                 onPressed: onTap,
@@ -278,7 +278,7 @@ class FlutterSocialButton extends StatelessWidget {
                 ),
               );
       //Phone Button implementation
-      case ButtonType.phone:
+      case OAuthButtonType.phone:
         return mini
             ? ElevatedButton(
                 onPressed: onTap,
