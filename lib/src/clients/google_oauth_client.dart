@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_web_auth/flutter_web_auth.dart';
 
-import '../../veegil_oauth2.dart';
+import '../../oauth2_code.dart';
 import '../auth_link.dart';
 
 class GoogleOAuthClient extends OAuthClient {

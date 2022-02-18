@@ -10,7 +10,7 @@ It also provides some social UI buttons for use within your app.
 
 <br>
 
-![OAuth2Button Image](https://github.com/Colman1000/veegil_oauth2/blob/main/lib/images/phone_screen.png?raw=true, "OAuth2Button Image")
+![OAuth2Button Image](https://github.com/Colman1000/oauth2_code/blob/main/lib/images/phone_screen.png?raw=true, "OAuth2Button Image")
 
 -----
 
@@ -31,7 +31,7 @@ dependencies:
 To authenticate a user using your custom client:
 
 ```dart
-import 'package:oauth2_code/veegil_oauth2.dart';
+import 'package:oauth2_code/oauth2_code.dart';
 
 /// Create your custom client 
 
@@ -121,17 +121,25 @@ create an HTML file with the name e.g. `auth.html` with content:
 
 ```html
 <!DOCTYPE html>
-<title>Authentication complete</title>
-<p>Authentication is complete. If this does not happen automatically, please
-    close the window.
-    <script>
+<html>
+<head>
+    <title>Authentication complete</title>
+</head>
+<body>
+<p>Authentication is complete. If this does not happen automatically, please close the window. </p>
+<script>
   window.opener.postMessage({
     'flutter-web-auth': window.location.href
   }, window.location.origin);
-  window.close();
-    
-    
-    </script>
+  window.close();    
+
+
+
+</script>
+</body>
+
+</html>
+
 ```
 
 Redirection URL passed to the authentication service must be the same as the URL on which the
@@ -149,21 +157,16 @@ string (for compatibility with other providers).
 
 ```dart
 
-import '';
+import 'package:oauth2_code/oauth2_code.dart';
 
 //For google Button
-OAuth2Button
-(
-onTap: () { //... }, //ontap handler
-mini: true //Whether to render circular button (mini) or rectangular button
-buttonType: OAuthButtonType.google, // Button type for different type buttons
-iconColor:
-Colors
-.
-black
-, // for change icons colors
+OAuth2Button (
+    onTap: () { /*...*/ }, //ontap handler
+    mini: true //Whether to render circular button (mini) or rectangular button
+    buttonType: OAuthButtonType.google, // Button type for different type buttons
+    iconColor: Colors.black, // for change icons colors
 )
-,  
+
 ```
 
 ## Button Types
