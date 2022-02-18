@@ -1,17 +1,16 @@
 <h1 align="center">OAuth2 Code</h1>
 
-
 ## Features
 
 An OAuth2 that gets and returns the auth code for Google, Facebook, LinkedIn and Twitter implemented
 for [Veegil](https://veegil.com). The low level implementation is based on
 the [flutter_web_auth](https://pub.dev/packages/flutter_web_auth) package.
 
-
 It also provides some social UI buttons for use within your app.
 
 <br>
-![Image](https://github.com/Colman1000/veegil_oauth2/blob/main/lib/images/phone_screen.png)
+
+![OAuth2Button Image](https://github.com/Colman1000/veegil_oauth2/blob/main/lib/images/phone_screen.png?raw=true, "OAuth2Button Image")
 
 -----
 
@@ -21,10 +20,10 @@ Add the dependency in pubsec.yaml file.
 
 ```yaml
 dart
-  dependencies:
-    flutter:
-      sdk: flutter
-    oauth2_code: any
+dependencies:
+  flutter:
+    sdk: flutter
+  oauth2_code: any
 ```
 
 ## Usage
@@ -80,7 +79,8 @@ final client = GoogleOAuthClient(
   AuthLink(/*...*/),
 );
 
-final code = await client.getAuthCode();
+final code = await
+client.getAuthCode();
 
 // do whatever you with with the auth code
 ```
@@ -129,6 +129,8 @@ create an HTML file with the name e.g. `auth.html` with content:
     'flutter-web-auth': window.location.href
   }, window.location.origin);
   window.close();
+    
+    
     </script>
 ```
 
@@ -150,14 +152,19 @@ string (for compatibility with other providers).
 import '';
 
 //For google Button
-OAuth2Button(
-onTap: () {  //... }, //ontap handler
+OAuth2Button
+(
+onTap: () { //... }, //ontap handler
 mini: true //Whether to render circular button (mini) or rectangular button
 buttonType: OAuthButtonType.google, // Button type for different type buttons
-iconColor: Colors.black,  // for change icons colors
-),  
+iconColor:
+Colors
+.
+black
+, // for change icons colors
+)
+,  
 ```
-
 
 ## Button Types
 
@@ -171,6 +178,7 @@ iconColor: Colors.black,  // for change icons colors
 - Phone
 - Email
 
-
 ## Contributing
-Pull requests are very welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Pull requests are very welcome. For major changes, please open an issue first to discuss what you
+would like to change.
